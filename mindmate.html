@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMate - E-learning & Tutoring Platform</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="mindmate-style.css">
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="index.html#projects" class="back-button">
+        <i class='bx bx-arrow-back'></i> Back to Portfolio
+    </a>
+
+     <button class="mode-toggle" id="modeToggle">
+        <i class='bx bx-sun'></i>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>MindMate</h1>
+            <p class="subtitle">A comprehensive educational platform built with Flutter that connects students with tutors, provides course management, and facilitates collaborative learning through forums and messaging. The app serves as a one-stop solution for academic support and learning management.</p>
+            <!-- <div class="project-meta">
+                <span class="meta-item"><i class='bx bx-code-alt'></i> Flutter</span>
+                <span class="meta-item"><i class='bx bx-server'></i> Firebase</span>
+                <span class="meta-item"><i class='bx bx-stats'></i> Active</span>
+                <span class="meta-item"><i class='bx bx-user'></i> Growing</span>
+            </div> -->
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    
+                    <h3>Authentication & User Management</h3>
+                    <p>Google Sign-In integration and Firebase authentication for secure user sessions and personalized profiles.</p>
+                </div>
+                <div class="feature-card">
+                   
+                    <h3>Course Management</h3>
+                    <p>Browse, enroll, and track progress across diverse courses with detailed modules and materials.</p>
+                </div>
+                <div class="feature-card">
+                    
+                    <h3>Tutor System</h3>
+                    <p>Find qualified tutors, schedule appointments, and manage personalized tutoring sessions.</p>
+                </div>
+                <div class="feature-card">
+                   
+                    <h3>Communication & Collaboration</h3>
+                    <p>Real-time messaging, discussion forums, and notifications for seamless academic interaction.</p>
+                </div>
+                <div class="feature-card">
+                   
+                    <h3>Network Monitoring</h3>
+                    <p>Automatic detection and handling of network connectivity with offline support.</p>
+                </div>
+                <div class="feature-card">
+                    
+                    <h3>Modern UI Design</h3>
+                    <p>Material Design 3 with dark/light theme support and responsive layouts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Screenshots</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal(0)">
+                    <img src="screenshots/dash-mindmate.jpeg" alt="Home Screen" class="gallery-image">
+                    <p class="gallery-caption">Home Screen</p>
+                </div>
+                <div class="gallery-item" onclick="openModal(1)">
+                    <img src="screenshots/courses.jpeg" alt="Courses" class="gallery-image">
+                    <p class="gallery-caption">Courses</p>
+                </div>
+                <div class="gallery-item" onclick="openModal(2)">
+                    <img src="screenshots/tutors.jpeg" alt="Tutors" class="gallery-image">
+                    <p class="gallery-caption">Tutors</p>
+                </div>
+                <div class="gallery-item" onclick="openModal(3)">
+                    <img src="screenshots/chats-mindmate.jpeg" alt="Chat Interface" class="gallery-image">
+                    <p class="gallery-caption">Chat Interface</p>
+                </div>
+                <div class="gallery-item" onclick="openModal(4)">
+                    <img src="screenshots/forum.jpeg" alt="Forum" class="gallery-image">
+                    <p class="gallery-caption">Forum</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <button class="modal-nav prev" onclick="changeImage(-1)">
+            <i class='bx bx-chevron-left'></i>
+        </button>
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <div class="placeholder-modal-image mobile">
+                    <i class='bx bx-mobile-alt'></i>
+                    <p id="modalImageText">Home Screen</p>
+                </div>
+            </div>
+        </div>
+        <button class="modal-nav next" onclick="changeImage(1)">
+            <i class='bx bx-chevron-right'></i>
+        </button>
+    </div>
+
+    <!-- Technology Stack -->
+    <section class="technical">
+        <div class="container">
+            <h2 class="section-title">Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li> Flutter (^3.6.2)</li>
+                        <li> Dart Programming Language</li>
+                        <li> Material Design 3</li>
+                        <li> Provider State Management</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h3>Backend & Services</h3>
+                    <ul>
+                        <li> Firebase Core</li>
+                        <li> Cloud Firestore</li>
+                        <li> Firebase Authentication</li>
+                        <li> Firebase Storage</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h3>Communication</h3>
+                    <ul>
+                        <li> Firebase Messaging</li>
+                        <li> Google Sign-In</li>
+                        <li> Real-time Database</li>
+                        <li> Push Notifications</li>
+                    </ul>
+                </div>
+                <!-- <div class="tech-category">
+                    <h3>Key Dependencies</h3>
+                    <ul>
+                        <li> Connectivity Plus</li>
+                        <li> Image Picker</li>
+                        <li> RxDart</li>
+                        <li> Intl Localization</li>
+                    </ul>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Modules -->
+    <section class="user-roles">
+        <div class="container">
+            <h2 class="section-title">Core Modules</h2>
+            <div class="roles-grid">
+                <div class="role-card">
+                    
+                    <h3>Authentication</h3>
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">Secure user authentication with Google Sign-In and Firebase</p>
+                    <ul>
+                        <li>User profiles with enrollment tracking</li>
+                        <li>Appointment management</li>
+                        <li>Session management</li>
+                        <li>Personalized dashboards</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    
+                    <h3>Course Management</h3>
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">Comprehensive course browsing and enrollment system</p>
+                    <ul>
+                        <li>Course details with modules</li>
+                        <li>Materials and resources</li>
+                        <li>Progress tracking</li>
+                        <li>Smart search functionality</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                   
+                    <h3>Tutor System</h3>
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">Connect students with qualified tutors</p>
+                    <ul>
+                        <li>Tutor directory with profiles</li>
+                        <li>Appointment booking</li>
+                        <li>Session management</li>
+                        <li>Rating and reviews</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    
+                    <h3>Community Features</h3>
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">Foster collaborative learning environment</p>
+                    <ul>
+                        <li>Discussion forums</li>
+                        <li>Real-time messaging</li>
+                        <li>Notifications</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Stats -->
+    <section class="overview">
+        <div class="container">
+            <h2 class="section-title">App Capabilities</h2>
+            <div class="stats">
+                <div class="stat-item">
+                    <h3>7</h3>
+                    <p>Main Feature Areas</p>
+                </div>
+                <div class="stat-item">
+                    <h3>15+</h3>
+                    <p>UI Screens</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Cross</h3>
+                    <p>Platform Support</p>
+                </div>
+                <div class="stat-item">
+                    <h3>Real-time</h3>
+                    <p>Synchronization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="project-links">
+        <div class="container">
+            <h2 class="section-title">Interested in This Project?</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem;">
+                Explore how I build scalable educational platforms with modern mobile technologies.
+            </p>
+            <div class="links-container">
+                <a href="index.html#contact" class="project-button">
+                    <i class='bx bx-briefcase'></i> Start a Project
+                </a>
+                <a href="https://github.com/Sirme247/Mindmate" target="_blank" class="project-button">
+                    <i class='bx bxl-github'></i> View Code
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">
+                <i class='bx bx-arrow-back'></i> Back to Portfolio
+            </a>
+        </div>
+    </footer>
+
+    <script src="mindmate-script.js"></script>
+</body>
+</html>
+

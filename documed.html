@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocuMed - Medical Records System</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="documed-style.css">
+</head>
+<body>
+    <!-- Back Button -->
+    <a href="index.html#projects" class="back-button">
+        <i class='bx bx-arrow-back'></i> Back to Portfolio
+    </a>
+
+    <button class="mode-toggle" id="modeToggle">
+        <i class='bx bx-sun'></i>
+    </button>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>DocuMed</h1>
+            <p class="subtitle">A comprehensive medical records management system designed to streamline healthcare operations. The platform enables healthcare providers to efficiently manage patient records, schedule appointments, track visits, and maintain hospital records—all within a secure, user-friendly interface.</p>
+           
+        </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    
+                    <h3>Patient Management</h3>
+                    <p>Complete patient record management including medical history, prescriptions, lab results, and treatment plans with secure data encryption.</p>
+                </div>
+              
+                <div class="feature-card">
+                   
+                    <h3>Role-Based Access Control</h3>
+                    <p>Granular permission system with different access levels for doctors, nurses, administrators, and staff members.</p>
+                </div>
+                <div class="feature-card">
+                  
+                    <h3>Analytics & Reports</h3>
+                    <p>Comprehensive reporting dashboard for tracking patient outcomes, operational metrics, and healthcare analytics.</p>
+                </div>
+                <div class="feature-card">
+                    
+                    <h3>Security & Compliance</h3>
+                    <p>End-to-end encryption, HIPAA compliance, audit logs, and two-factor authentication for maximum data protection.</p>
+                </div>
+                <div class="feature-card">
+                   
+                    <h3>API Integration</h3>
+                    <p>Integration with third-party health APIs for lab results and medical imaging services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshots Gallery -->
+    <section class="gallery">
+        <div class="container">
+            <h2 class="section-title">Screenshots</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" onclick="openModal(0)">
+                    <img src="screenshots/dash-documed.png" alt="Dashboard" class="gallery-image">
+                    <p class="gallery-caption">Dashboard</p>
+                </div>
+                <div class="gallery-item" onclick="openModal(1)">
+                    <img src="screenshots/patient-list.png" alt="Patients" class="gallery-image">
+                    <p class="gallery-caption">Patient List</p>
+                </div>
+                <div class="gallery-item" onclick="openModal(2)">
+                    <img src="screenshots/patient.png" alt="Patient Details" class="gallery-image">
+                    <p class="gallery-caption">Patient Details</p>
+                </div>
+                <div class="gallery-item" onclick="openModal(3)">
+                    <img src="screenshots/hospital.png" alt="Hospital View" class="gallery-image">
+                    <p class="gallery-caption">Hospital List</p>
+                </div>
+                <div class="gallery-item" onclick="openModal(4)">
+                    <img src="screenshots/users.png" alt="Users" class="gallery-image">
+                    <p class="gallery-caption">User Management</p>
+                </div>
+                <div class="gallery-item" onclick="openModal(5)">
+                    <img src="screenshots/audit-logs.png" alt="Audit Logs" class="gallery-image">
+                    <p class="gallery-caption">Audit Logs</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <button class="modal-nav prev" onclick="changeImage(-1)">
+            <i class='bx bx-chevron-left'></i>
+        </button>
+        <div class="modal-content-wrapper">
+            <div class="modal-content">
+                <div class="placeholder-modal-image">
+                    <i class='bx bx-image-alt'></i>
+                    <p id="modalImageText">Dashboard View</p>
+                </div>
+            </div>
+        </div>
+        <button class="modal-nav next" onclick="changeImage(1)">
+            <i class='bx bx-chevron-right'></i>
+        </button>
+    </div>
+
+    <!-- Technology Stack -->
+    <section class="technical">
+        <div class="container">
+            <h2 class="section-title">Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3>Frontend</h3>
+                    <ul>
+                        <li><i class='bx bx-check'></i> React with JavaScript</li>
+                        <li><i class='bx bx-check'></i> Redux for state management</li>
+                        <li><i class='bx bx-check'></i> Material-UI components</li>
+                        <li><i class='bx bx-check'></i> WebSocket real-time updates</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h3>Backend</h3>
+                    <ul>
+                        <li><i class='bx bx-check'></i> Node.js with Express.js</li>
+                        <li><i class='bx bx-check'></i> RESTful API architecture</li>
+                        <li><i class='bx bx-check'></i> PostgreSQL with Sequelize ORM</li>
+                        <li><i class='bx bx-check'></i> Redis caching layer</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h3>Security</h3>
+                    <ul>
+                        <li><i class='bx bx-check'></i> JWT authentication</li>
+                        <li><i class='bx bx-check'></i> End-to-end encryption</li>
+                        <li><i class='bx bx-check'></i> HIPAA compliance measures</li>
+                        <li><i class='bx bx-check'></i> Two-factor authentication</li>
+                    </ul>
+                </div>
+                <div class="tech-category">
+                    <h3>DevOps</h3>
+                    <ul>
+                        <li><i class='bx bx-check'></i> Docker containerization</li>
+                        <li><i class='bx bx-check'></i> CI/CD with GitHub Actions</li>
+                        <li><i class='bx bx-check'></i> AWS deployment</li>
+                        <li><i class='bx bx-check'></i> CloudWatch monitoring</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Modules -->
+    <section class="user-roles">
+        <div class="container">
+            <h2 class="section-title">Core Modules</h2>
+            <div class="roles-grid">
+                <div class="role-card">
+                   
+                    <h3>Patient Records</h3>
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">Comprehensive patient information management</p>
+                    <ul>
+                        <li>Medical history tracking</li>
+                        <li>Prescription management</li>
+                        <li>Lab results integration</li>
+                        <li>Medical Imaging storage and access</li>
+                        <li>Treatment plans</li>
+                    </ul>
+                </div>
+                <!-- <div class="role-card">
+                    
+                    <h3> Scheduling System</h3>
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">Smart appointment management</p>
+                    <ul>
+                        <li>Calendar integration</li>
+                        <li>Automated reminders</li>
+                        <li>Conflict detection</li>
+                        <li>Visit tracking</li>
+                    </ul>
+                </div> -->
+                <div class="role-card">
+                    
+                    <h3> User Management</h3>
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">Role-based access control system</p>
+                    <ul>
+                        <li>Doctor access levels</li>
+                        <li>Nurse permissions</li>
+                        <li>Admin capabilities</li>
+                        <li>Staff management</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    
+                    <h3> Analytics & Audit</h3>
+                    <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.5rem;">Data insights and compliance tracking</p>
+                    <ul>
+                        <li>Patient outcome metrics</li>
+                        <li>Operational analytics</li>
+                        <li>Audit trail logging</li>
+                        <li>Comprehensive annual medical summary</li>
+                        <li>Compliance reports</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- System Capabilities -->
+<section class="overview">
+    <div class="container">
+        <h2 class="section-title">System Capabilities</h2>
+        <div class="stats">
+            <div class="stat-item">
+                <h3>12+</h3>
+                <p>Core Modules</p>
+            </div>
+            <div class="stat-item">
+                <h3>20+</h3>
+                <p>System Screens</p>
+            </div>
+            <div class="stat-item">
+                <h3>Role-Based</h3>
+                <p>Access Control</p>
+            </div>
+            <div class="stat-item">
+                <h3>Audit-Ready</h3>
+                <p>System Activity Tracking</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- CTA Section -->
+    <section class="project-links">
+        <div class="container">
+            <h2 class="section-title">Interested in This Project?</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 2rem; font-size: 1.1rem;">
+                Explore how I build secure, scalable healthcare management systems.
+            </p>
+            <div class="links-container">
+                <a href="index.html#contact" class="project-button">
+                    <i class='bx bx-briefcase'></i> Start a Project
+                </a>
+                <a href="https://github.com/Sirme247/Documed" target="_blank" class="project-button">
+                    <i class='bx bxl-github'></i> View Code
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <a href="index.html#projects" class="back-link">
+                <i class='bx bx-arrow-back'></i> Back to Portfolio
+            </a>
+        </div>
+    </footer>
+
+    <script src="documed-script.js"></script>
+</body>
+</html>
+
